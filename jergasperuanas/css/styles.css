@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #FDF2F2;
+    color: #333;
+    padding: 20px;
+    transition: transform 0.2s ease-in-out, background-color 0.2s, color 0.2s;
+    cursor: pointer;
+    border: 2px solid;
+    border-image: linear-gradient(to right,#ffffff, #EC5858);
+    border-image-slice: 1;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    background-color: #F6E3E3;
+}
+
+.card:active {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+    background-color: #EC5858;
+    padding: 10px 0;
+}
+
+.content{
+    max-height: 20px;
+    text-align: justify;
+    visibility: visible;
+    opacity: 1;
+    transition: max-height 0.3s linear;
+  }
+.noshow{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.25s, opacity 0.25s ease-in;
+  }
+.negritac{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.25s, opacity 0.25s ease-in;
+  }
+.content .clicked{
+    visibility : visible;
+    opacity : 1;
+  }
+.card-body .expanded{
+    max-height: 300px;
+  }
+
+/* Estilos responsive */
+@media screen and (max-width: 480px) {
+    .card {
+        width: 80%; /* La tarjeta ocupará el 100% del ancho en dispositivos móviles */
+    }
+}
+
+
+
+
+  
