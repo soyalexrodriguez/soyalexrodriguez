@@ -25,6 +25,8 @@ body{
     position: absolute;
     content: '0';
     color: #0011ff;
+    opacity: 0.3;
+    animation: animacionGota 0.5s linear infinite;
 }
 
 .imagen-centrada{
@@ -32,12 +34,14 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 1;
+    z-index: 5;
     top: 17%;
 }
 
 h1{
     color: white;
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(119, 119, 119, 0.1), 0 0 5px rgba(214, 214, 214, 0.1), 0 1px 3px rgba(197, 197, 197, 0.3), 0 3px 5px rgba(207, 207, 207, 0.2), 0 5px 10px rgba(207, 204, 204, 0.25);
+    ;
 }
 
 .imagen-perfil{
@@ -52,19 +56,44 @@ h1{
 p{
     font-size: 2em;
     color: rgb(197, 197, 197);
+    text-shadow: 0px 0px 0 rgb(167,167,167),
+    -1px 1px 0 rgb(136,136,136),
+    -2px 2px 0 rgb(106,106,106),
+    -3px 3px 0 rgb(75,75,75),
+    -4px 4px 0 rgb(45,45,45),
+    -5px 5px  0 rgb(15,15,15),
+    -6px 6px 5px rgba(0,0,0,0.93),
+    -6px 6px 1px rgba(0,0,0,0.5),
+    0px 0px 5px rgba(0,0,0,.2);
 }
 
 #barraPuntero{
     font-weight: bold;
     font-size: 1.2em;
+    animation: barraPuntero 1s normal 1s infinite;
 }
 
 #contenedor-version{
     margin: -20px;
+    
 }
 
 #contenedor-version img{
     width: 20px;
+}
+
+@keyframes animacionGota{
+    from{
+        transform: translateY(0vh);
+    }
+    to{
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes barraPuntero{
+    from{opacity: 0;}
+    to{opacity:1;}
 }
 
 @media (max-width: 360px){
@@ -74,6 +103,9 @@ p{
     .imagen-centrada{
         top: 10%;
     }
+    .gota{
+        font-size: 50px;
+    }
 }
 
 @media (max-width: 415px) and (min-width: 361px){
@@ -82,5 +114,8 @@ p{
     }
     .imagen-centrada{
         top: 15%;
+    }
+    .gota{
+        font-size: 50px;
     }
 }
