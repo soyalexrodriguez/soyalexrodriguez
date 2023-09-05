@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(0deg, rgba(180, 208, 245, 0.922) 2%, rgb(155, 177, 240) 8%, rgba(0, 14, 95, 0.986) 90%);
+    overflow: hidden;
+    font-family: 'Share Tech', sans-serif;;
+}
+.lluvia{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    pointer-events: none;
+}
+.imagen-centrada{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    top: 17%;
+}
+
+h1{
+    color: white;
+}
+
+.imagen-perfil{
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 4px solid rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+p{
+    font-size: 2em;
+    color: rgb(197, 197, 197);
+}
+
+#barraPuntero{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#contenedor-version{
+    margin: -20px;
+}
+
+#contenedor-version img{
+    width: 20px;
+}
+
+@media (max-width: 360px){
+    .imagen-perfil{
+        max-width: 150px;
+    }
+    .imagen-centrada{
+        top: 10%;
+    }
+}
+
+@media (max-width: 415px) and (min-width: 361px){
+    .imagen-perfil{
+        max-width: 250px;
+    }
+    .imagen-centrada{
+        top: 15%;
+    }
+}
