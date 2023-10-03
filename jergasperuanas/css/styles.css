@@ -3,6 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     min-height: 100vh;
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
@@ -68,6 +69,19 @@ body {
     max-height: 300px;
   }
 
+#contenButton{
+  width: 90%;
+  max-width: 400px;
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+}
+#update{
+  width: 70%;
+  font-size: 1.2em;
+  padding: 6px;
+  cursor: pointer;
+}
 /* Estilos responsive */
 @media screen and (max-width: 480px) {
     .card {
